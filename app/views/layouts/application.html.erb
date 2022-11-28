@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<%= javascript_include_tag "application" %>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <script type = "text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+   <div class="container">
+        <h1>Try Not to laugh 😆</h1>
+        <p class="joke-text">
+            Joke resides here...
+        </p>
+        <div class="button">
+        <input type="button" onclick="getJoke()"value>Get Joke</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #6B2A7E;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+.container {
+  width: 450px;
+  padding: 50px 20px; 
+  background-color: #fff;
+  border-radius: 5px;
+}
+.btn {
+  padding: 10px 20px; 
+  margin: 0 5px; 
+  font-size: 0.99rem;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: blue; 
+}
+h1 {
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  cursor: pointer; 
+}
+.new-joke-btn {
+  background-color: #FF0000;
+}
+
+.joke-text {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-family: monospace;
+}
+</style>
+
+</html>
