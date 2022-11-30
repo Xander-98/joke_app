@@ -1,17 +1,15 @@
-const jokeText = document.querySelector('.joke-text');
-const newJokeBtn = document.querySelector('.new-joke-btn');
-newJokeBtn.addEventListener('click', getJoke);
+const joke = document.getElementById("text");
+const btn = document.getElementById("btn");
+btn.addEventListener('onclick', jokes);
 getJoke();
 
-function getJoke() {
-    GET('https://icanhazdadjoke.com/', {
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(function(response) {
-        return response.json();
-    }).then(function(data) {
-        const joke = data.joke;
-        jokeText.innerText = joke;
-    });
+function jokes(){
+    fetch('https://icanhazdadjoke.com/') 
+    .then(res => res.json())
+    .then(data =>{
+        console.log(data.joke)
+        joke.innerText = data.joke
+        document.getElementById('btn')
+        innerHTML=jokes
+    })
 }
